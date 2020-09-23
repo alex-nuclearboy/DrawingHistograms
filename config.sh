@@ -5,5 +5,6 @@ scp wasa:/data7/users/khreptak/OUTPUT/MC/MC-newcuts-AddGammaCut-pd-bound-pdpi0.r
 scp wasa:/data7/users/khreptak/OUTPUT/MC/MC-newcuts-AddGammaCut-pd-pdpi0.root ./input
 scp wasa:/data7/users/khreptak/OUTPUT/MC/MC-newcuts-AddGammaCut-x6-pd-bound-pdpi0.root ./input
 scp wasa:/data7/users/khreptak/OUTPUT/MC/MC-newcuts-AddGammaCut-x6-pd-pdpi0.root ./input
+scp wasa:/data7/users/khreptak/OUTPUT/MC/MC-acceptance.root ./input
 mkdir ./output
 mkdir ./output/plots
