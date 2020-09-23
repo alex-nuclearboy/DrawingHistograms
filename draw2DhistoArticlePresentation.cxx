@@ -236,5 +236,6 @@ void draw2DhistoArticlePresentation() {
     capt02->Draw();
 
     myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgrnd.png","png");
+    myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgrnd.eps","eps");
 
 }
