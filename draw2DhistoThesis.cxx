@@ -260,8 +260,8 @@ void draw2DhistoThesis() {
     Prot->Draw("same");
     Deut->Draw("same");
 
-    myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgnd.png","png");
-    myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgnd.eps","eps");
+    myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgrnd.png","png");
+    myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgrnd.eps","eps");
 
     //
     TCanvas* myCanvas03=new TCanvas("MyCanvas03","",600,550);
@@ -294,7 +294,7 @@ void draw2DhistoThesis() {
     Pion->Draw("same");
     //Deut->Draw("same");
 
-    myCanvas03->Print("output/plots/hEdepPSBvsSEC_bkgnd_pi.png","png");
-    myCanvas03->Print("output/plots/hEdepPSBvsSEC_bkgnd_pi.eps","eps");
+    myCanvas03->Print("output/plots/hEdepPSBvsSEC_bkgrnd_pi.png","png");
+    myCanvas03->Print("output/plots/hEdepPSBvsSEC_bkgrnd_pi.eps","eps");
 
 }
