@@ -1,3 +1,13 @@
+/***********************************************
+* Software developement for WASA-at-COSY
+* (c) 2005-2020 The WASA-at-COSY Collaboration
+* Aleksander K.                 2020-06
+* This software is distributed under the terms
+  of the GNU General Public Licence v3.0
+*
+* Modified 2020-09
+***********************************************/
+
 #include<TH1F.h>
 #include<TH2F.h>
 #include<TH3F.h>
