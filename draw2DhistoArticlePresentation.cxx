@@ -147,15 +147,15 @@ void draw2DhistoArticlePresentation() {
     Prot->Draw("same");
     Pion->Draw("same");
 
-    TPaveText *capt00 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt00");
-    //TPaveText *capt00 = new TPaveText(0.26,0.00997,0.48,0.01105,"capt00");
+    //TPaveText *capt00 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt00");
+    TPaveText *capt00 = new TPaveText(0.26,0.00997,0.48,0.01105,"capt00");
     capt00->SetTextFont(42); capt00->SetTextSize(0.06);
     capt00->SetTextAlign(22);
     capt00->SetFillStyle(1001);
-    capt00->SetShadowColor(0); capt00->SetFillColor(0); //capt00->SetTextColor(2);
+    capt00->SetShadowColor(0); capt00->SetFillColor(0); capt00->SetTextColor(2);
     capt00->SetBorderSize(0);
-    capt00->AddText("(a)");
-    //capt00->AddText("Experimental data");
+    //capt00->AddText("(a)");
+    capt00->AddText("Experimental data");
     capt00->Draw();
 
     MyCanvas00->Print("output/plots/hEdepPSBvsSEC_DATA.png","png");
@@ -186,15 +186,15 @@ void draw2DhistoArticlePresentation() {
     Prot->Draw("same");
     //Pion->Draw("same");
 
-    TPaveText *capt01 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt01");
-    //TPaveText *capt01 = new TPaveText(0.18,0.00999,0.48,0.0115,"capt01");
+    //TPaveText *capt01 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt01");
+    TPaveText *capt01 = new TPaveText(0.18,0.00999,0.48,0.0115,"capt01");
     capt01->SetTextFont(42); capt01->SetTextSize(0.06);
     capt01->SetTextAlign(22);
     capt01->SetFillStyle(1001);
-    capt01->SetShadowColor(0); capt01->SetFillColor(0); //capt01->SetTextColor(2);
+    capt01->SetShadowColor(0); capt01->SetFillColor(0); capt01->SetTextColor(2);
     capt01->SetBorderSize(0);
-    capt01->AddText("(b)");
-    //capt01->AddText("pd #rightarrow (^{3}He-#eta)_{bound} #rightarrow dp#pi^{0}");
+    //capt01->AddText("(b)");
+    capt01->AddText("pd #rightarrow (^{3}He-#eta)_{bound} #rightarrow dp#pi^{0}");
     capt01->Draw();
 
     MyCanvas01->Print("output/plots/hEdepPSBvsSEC_MC.png","png");
@@ -224,15 +224,15 @@ void draw2DhistoArticlePresentation() {
 
     Prot->Draw("same");
 
-    TPaveText *capt02 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt02");
-    //TPaveText *capt02 = new TPaveText(0.34,0.00997,0.48,0.01105,"capt02");
+    //TPaveText *capt02 = new TPaveText(0.442,0.00997,0.474,0.01105,"capt02");
+    TPaveText *capt02 = new TPaveText(0.34,0.00997,0.48,0.01105,"capt02");
     capt02->SetTextFont(42); capt02->SetTextSize(0.06);
     capt02->SetTextAlign(22);
     capt02->SetFillStyle(1001);
-    capt02->SetShadowColor(0); capt02->SetFillColor(0); //capt02->SetTextColor(2);
+    capt02->SetShadowColor(0); capt02->SetFillColor(0); capt02->SetTextColor(2);
     capt02->SetBorderSize(0);
-    capt02->AddText("(c)");
-    //capt02->AddText("pd #rightarrow dp#pi^{0}");
+    //capt02->AddText("(c)");
+    capt02->AddText("pd #rightarrow dp#pi^{0}");
     capt02->Draw();
 
     myCanvas02->Print("output/plots/hEdepPSBvsSEC_bkgrnd.png","png");

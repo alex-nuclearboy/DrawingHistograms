@@ -112,7 +112,7 @@ void draw1DhistoArticlePresentation() {
     hInvariantMass_pion[0]->GetXaxis()->SetTitleOffset(1.);
     hInvariantMass_pion[0]->GetXaxis()->SetTitleSize(0.06);
     hInvariantMass_pion[0]->GetXaxis()->SetLabelSize(0.05);
-    hInvariantMass_pion[0]->GetYaxis()->SetTitle("10^{4} counts");
+    hInvariantMass_pion[0]->GetYaxis()->SetTitle("10^{-4} counts");
     hInvariantMass_pion[0]->GetYaxis()->SetTitleOffset(0.8);
     hInvariantMass_pion[0]->GetYaxis()->SetTitleSize(0.06);
     hInvariantMass_pion[0]->GetYaxis()->SetLabelSize(0.05);
@@ -135,7 +135,7 @@ void draw1DhistoArticlePresentation() {
 
     hInvariantMass_pion[2]->SetLineWidth(2);
     hInvariantMass_pion[2]->SetLineColor(kAzure-3);
-    hInvariantMass_pion[2]->SetLineStyle(2);
+    hInvariantMass_pion[2]->SetLineStyle(3);
     hInvariantMass_pion[2]->Scale(scale002);
     hInvariantMass_pion[2]->Draw("same C");
 
@@ -199,7 +199,7 @@ void draw1DhistoArticlePresentation() {
     hOpeningAngle_pi0_p_cm[0]->GetXaxis()->SetTitleOffset(1.);
     hOpeningAngle_pi0_p_cm[0]->GetXaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm[0]->GetXaxis()->SetLabelSize(0.05);
-    hOpeningAngle_pi0_p_cm[0]->GetYaxis()->SetTitle("10^{3} counts");
+    hOpeningAngle_pi0_p_cm[0]->GetYaxis()->SetTitle("10^{-3} counts");
     hOpeningAngle_pi0_p_cm[0]->GetYaxis()->SetTitleOffset(0.8);
     hOpeningAngle_pi0_p_cm[0]->GetYaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm[0]->GetYaxis()->SetLabelSize(0.05);
@@ -222,7 +222,7 @@ void draw1DhistoArticlePresentation() {
 
     hOpeningAngle_pi0_p_cm[2]->SetLineWidth(2);
     hOpeningAngle_pi0_p_cm[2]->SetLineColor(kAzure-3);
-    hOpeningAngle_pi0_p_cm[2]->SetLineStyle(2);
+    hOpeningAngle_pi0_p_cm[2]->SetLineStyle(3);
     hOpeningAngle_pi0_p_cm[2]->Scale(scale012);
     hOpeningAngle_pi0_p_cm[2]->Draw("same C");
 
@@ -274,7 +274,7 @@ void draw1DhistoArticlePresentation() {
     hMissingMass_nucleon[0]->GetXaxis()->SetTitleOffset(1.);
     hMissingMass_nucleon[0]->GetXaxis()->SetTitleSize(0.06);
     hMissingMass_nucleon[0]->GetXaxis()->SetLabelSize(0.05);
-    hMissingMass_nucleon[0]->GetYaxis()->SetTitle("10^{3} counts");
+    hMissingMass_nucleon[0]->GetYaxis()->SetTitle("10^{-3} counts");
     hMissingMass_nucleon[0]->GetYaxis()->SetTitleOffset(0.8);
     hMissingMass_nucleon[0]->GetYaxis()->SetTitleSize(0.06);
     hMissingMass_nucleon[0]->GetYaxis()->SetLabelSize(0.05);
@@ -297,7 +297,7 @@ void draw1DhistoArticlePresentation() {
     hMissingMass_nucleon[2]->SetLineWidth(2);
     hMissingMass_nucleon[2]->SetLineColor(kAzure-3);
     hMissingMass_nucleon[2]->Scale(scale022);
-    hMissingMass_nucleon[2]->SetLineStyle(2);
+    hMissingMass_nucleon[2]->SetLineStyle(3);
     hMissingMass_nucleon[2]->Draw("same C");
 
 
@@ -333,7 +333,22 @@ void draw1DhistoArticlePresentation() {
     capt02->SetShadowColor(0); capt02->SetFillColor(0);
     capt02->SetBorderSize(0);
     capt02->AddText("(c)");
-    capt02->Draw("");
+    //capt02->Draw("");
+
+    TPaveText *formula = new TPaveText(0.01,1.8,1.7,5.7,"formula");
+    formula->SetTextFont(42); formula->SetTextSize(0.05);
+    formula->SetTextAlign(12);
+    formula->SetFillStyle(0);
+    formula->SetShadowColor(0); formula->SetFillColor(0);
+    formula->SetBorderSize(0);
+    formula->AddText("m_{X}^{2} = E_{X}^{2} - p_{X}^{2} ");
+    //formula->AddText("= (E_{beam} + E_{taget} - E_{proton}");
+    formula->AddText("= (E_{beam} + E_{taget} - E_{proton} - E_{\pi^{0}})^{2}");
+    formula->AddText("- (p_{beam} + p_{taget} - p_{proton} - p_{\pi^{0}})^{2}");
+    //formula->AddText("");
+    formula->Draw();
+
+
 
     MyCanvas02->Print("output/plots/hMissingMass_nucleon.png","png");
     MyCanvas02->Print("output/plots/hMissingMass_nucleon.eps","eps");
@@ -360,7 +375,7 @@ void draw1DhistoArticlePresentation() {
     hMomentum_deuteron[0]->GetXaxis()->SetTitleOffset(1.);
     hMomentum_deuteron[0]->GetXaxis()->SetTitleSize(0.06);
     hMomentum_deuteron[0]->GetXaxis()->SetLabelSize(0.05);
-    hMomentum_deuteron[0]->GetYaxis()->SetTitle("10^{3} counts");
+    hMomentum_deuteron[0]->GetYaxis()->SetTitle("10^{-3} counts");
     hMomentum_deuteron[0]->GetYaxis()->SetTitleOffset(0.8);
     hMomentum_deuteron[0]->GetYaxis()->SetTitleSize(0.06);
     hMomentum_deuteron[0]->GetYaxis()->SetLabelSize(0.05);
@@ -383,7 +398,7 @@ void draw1DhistoArticlePresentation() {
     hMomentum_deuteron[2]->SetLineWidth(2);
     hMomentum_deuteron[2]->SetLineColor(kAzure-3);
     hMomentum_deuteron[2]->Scale(scale032);
-    hMomentum_deuteron[2]->SetLineStyle(2);
+    hMomentum_deuteron[2]->SetLineStyle(3);
     hMomentum_deuteron[2]->Draw("same C");
 
     TLine* line031 = new TLine(0.6,0.,0.6,maxY03);
