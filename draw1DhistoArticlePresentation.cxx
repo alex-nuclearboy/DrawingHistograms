@@ -343,8 +343,8 @@ void draw1DhistoArticlePresentation() {
     formula->SetBorderSize(0);
     formula->AddText("m_{X}^{2} = E_{X}^{2} - p_{X}^{2} ");
     //formula->AddText("= (E_{beam} + E_{taget} - E_{proton}");
-    formula->AddText("= (E_{beam} + E_{taget} - E_{proton} - E_{\pi^{0}})^{2}");
-    formula->AddText("- (p_{beam} + p_{taget} - p_{proton} - p_{\pi^{0}})^{2}");
+    formula->AddText("= (E_{beam} + E_{taget} - E_{proton} - E_{\gamma_{1}} - E_{\gamma_{2}})^{2}");
+    formula->AddText("- (p_{beam} + p_{taget} - p_{proton} - p_{\gamma_{1}} - p_{\gamma_{2}})^{2}");
     //formula->AddText("");
     formula->Draw();
 
