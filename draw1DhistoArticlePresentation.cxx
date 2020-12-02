@@ -336,15 +336,15 @@ void draw1DhistoArticlePresentation() {
     //capt02->Draw("");
 
     TPaveText *formula = new TPaveText(0.01,1.8,1.7,5.7,"formula");
-    formula->SetTextFont(42); formula->SetTextSize(0.045);
+    formula->SetTextFont(42); formula->SetTextSize(0.05);
     formula->SetTextAlign(12);
     formula->SetFillStyle(0);
     formula->SetShadowColor(0); formula->SetFillColor(0);
     formula->SetBorderSize(0);
     formula->AddText("m_{X}^{2} = E_{X}^{2} - p_{X}^{2} ");
     //formula->AddText("= (E_{beam} + E_{taget} - E_{proton}");
-    formula->AddText("= (E_{beam} + E_{taget} - E_{proton} - E_{#gamma_{1}} - E_{#gamma_{2}})^{2}");
-    formula->AddText("- (p_{beam} + p_{taget} - p_{proton} - p_{#gamma_{1}} - p_{#gamma_{2}})^{2}");
+    formula->AddText("= (E_{beam} + E_{taget} - E_{proton} - E_{#pi^{0}})^{2}");
+    formula->AddText("- (p_{beam} + p_{taget} - p_{proton} - p_{#pi^{0}})^{2}");
     //formula->AddText("");
     formula->Draw();
 
