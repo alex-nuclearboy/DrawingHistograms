@@ -151,7 +151,7 @@ void draw1DhistoArticlePresentation() {
     line001->SetLineStyle(1);
     line001->Draw("same");
 
-    TLine* line002 = new TLine(endCut_IM,0.,endCut_IM[0],maxY00);
+    TLine* line002 = new TLine(endCut_IM,0.,endCut_IM,maxY00);
     line002->SetLineColor(2);
     line002->SetLineWidth(1);
     line002->SetLineStyle(1);
