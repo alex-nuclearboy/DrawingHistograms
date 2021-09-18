@@ -48,7 +48,7 @@
 
 void drawKinemHistoThesis() {
 
-    TFile* myFile[4];    
+    TFile* myFile[4];
     myFile[0] = new TFile("input/DATA-newcuts-AddGammaCut-offset-bound-pdpi0.root","READ");
     myFile[1] = new TFile("input/MC-newcuts-AddGammaCut-pd-bound-pdpi0.root","READ");
     myFile[2] = new TFile("input/MC-newcuts-AddGammaCut-pd-pdpi0.root","READ");
@@ -101,7 +101,7 @@ void drawKinemHistoThesis() {
     Double_t maxY00 = hOpeningAngle_pi0_p_cm[0][0]->GetMaximum()*1.1;
 
     //hOpeningAngle_pi0_p_cm[0][0]->SetTitle("Opening Angle");
-    hOpeningAngle_pi0_p_cm[0][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM},#circ");
+    hOpeningAngle_pi0_p_cm[0][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM} [#circ]");
     hOpeningAngle_pi0_p_cm[0][0]->GetXaxis()->SetTitleOffset(1.);
     hOpeningAngle_pi0_p_cm[0][0]->GetXaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm[0][0]->GetXaxis()->SetLabelSize(0.05);
@@ -121,9 +121,9 @@ void drawKinemHistoThesis() {
     hOpeningAngle_pi0_p_cm[0][0]->Draw("p");
 
     hOpeningAngle_pi0_p_cm[0][1]->SetLineWidth(1);
-    hOpeningAngle_pi0_p_cm[0][1]->SetLineColor(kOrange+7);
+    hOpeningAngle_pi0_p_cm[0][1]->SetLineColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[0][1]->SetFillStyle(3354);
-    hOpeningAngle_pi0_p_cm[0][1]->SetFillColor(kOrange+7);
+    hOpeningAngle_pi0_p_cm[0][1]->SetFillColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[0][1]->Draw("same LF2");
 
     TLine* line00[2];
@@ -188,7 +188,7 @@ void drawKinemHistoThesis() {
     Double_t maxY01 = hOpeningAngle_pi0_p_cm[1][0]->GetMaximum()*1.1;
 
     //hOpeningAngle_pi0_p_cm[1][0]->SetTitle("Opening Angle");
-    hOpeningAngle_pi0_p_cm[1][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM},#circ");
+    hOpeningAngle_pi0_p_cm[1][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM} [#circ]");
     hOpeningAngle_pi0_p_cm[1][0]->GetXaxis()->SetTitleOffset(1.);
     hOpeningAngle_pi0_p_cm[1][0]->GetXaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm[1][0]->GetXaxis()->SetLabelSize(0.05);
@@ -208,9 +208,9 @@ void drawKinemHistoThesis() {
     hOpeningAngle_pi0_p_cm[1][0]->Draw("p");
 
     hOpeningAngle_pi0_p_cm[1][1]->SetLineWidth(1);
-    hOpeningAngle_pi0_p_cm[1][1]->SetLineColor(kOrange+7);
+    hOpeningAngle_pi0_p_cm[1][1]->SetLineColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[1][1]->SetFillStyle(3354);
-    hOpeningAngle_pi0_p_cm[1][1]->SetFillColor(kOrange+7);    
+    hOpeningAngle_pi0_p_cm[1][1]->SetFillColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[1][1]->Draw("same LF2");
 
     TLine* line01[2];
@@ -282,7 +282,7 @@ void drawKinemHistoThesis() {
     Double_t maxY02 = hOpeningAngle_pi0_p_cm[2][0]->GetMaximum()*1.1;
 
     //hOpeningAngle_pi0_p_cm[2][0]->SetTitle("Opening Angle");
-    hOpeningAngle_pi0_p_cm[2][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM},#circ");
+    hOpeningAngle_pi0_p_cm[2][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM} [#circ]");
     hOpeningAngle_pi0_p_cm[2][0]->GetXaxis()->SetTitleOffset(1.);
     hOpeningAngle_pi0_p_cm[2][0]->GetXaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm[2][0]->GetXaxis()->SetLabelSize(0.05);
@@ -302,9 +302,9 @@ void drawKinemHistoThesis() {
     hOpeningAngle_pi0_p_cm[2][0]->Draw("p");
 
     hOpeningAngle_pi0_p_cm[2][1]->SetLineWidth(1);
-    hOpeningAngle_pi0_p_cm[2][1]->SetLineColor(kOrange+7);
+    hOpeningAngle_pi0_p_cm[2][1]->SetLineColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[2][1]->SetFillStyle(3354);
-    hOpeningAngle_pi0_p_cm[2][1]->SetFillColor(kOrange+7);
+    hOpeningAngle_pi0_p_cm[2][1]->SetFillColor(kOrange+1);
     hOpeningAngle_pi0_p_cm[2][1]->Draw("same LF2");
 
     TLine* line02[2];
@@ -368,7 +368,7 @@ void drawKinemHistoThesis() {
     Double_t maxY10 = hMomentum_d_lab[0][0]->GetMaximum()*1.1;
 
     //hMomentum_d_lab[0][0]->SetTitle("Deuteron momentum distribuntion");
-    hMomentum_d_lab[0][0]->GetXaxis()->SetTitle("p_{d}, GeV/c");
+    hMomentum_d_lab[0][0]->GetXaxis()->SetTitle("p_{d} [GeV/c]");
     hMomentum_d_lab[0][0]->GetXaxis()->SetTitleOffset(1.);
     hMomentum_d_lab[0][0]->GetXaxis()->SetTitleSize(0.06);
     hMomentum_d_lab[0][0]->GetXaxis()->SetLabelSize(0.05);
@@ -388,9 +388,9 @@ void drawKinemHistoThesis() {
     hMomentum_d_lab[0][0]->Draw("p");
 
     hMomentum_d_lab[0][1]->SetLineWidth(1);
-    hMomentum_d_lab[0][1]->SetLineColor(kOrange+7);
+    hMomentum_d_lab[0][1]->SetLineColor(kOrange+1);
     hMomentum_d_lab[0][1]->SetFillStyle(3354);
-    hMomentum_d_lab[0][1]->SetFillColor(kOrange+7);
+    hMomentum_d_lab[0][1]->SetFillColor(kOrange+1);
     hMomentum_d_lab[0][1]->Draw("same LF2");
 
     TLine* line10[3];
@@ -462,7 +462,7 @@ void drawKinemHistoThesis() {
     Double_t maxY11 = hMomentum_d_lab[1][0]->GetMaximum()*1.1;
 
     //hMomentum_d_lab[1][0]->SetTitle("Deuteron momentum distribuntion");
-    hMomentum_d_lab[1][0]->GetXaxis()->SetTitle("p_{d}, GeV/c");
+    hMomentum_d_lab[1][0]->GetXaxis()->SetTitle("p_{d} [GeV/c]");
     hMomentum_d_lab[1][0]->GetXaxis()->SetTitleOffset(1.);
     hMomentum_d_lab[1][0]->GetXaxis()->SetTitleSize(0.06);
     hMomentum_d_lab[1][0]->GetXaxis()->SetLabelSize(0.05);
@@ -482,9 +482,9 @@ void drawKinemHistoThesis() {
     hMomentum_d_lab[1][0]->Draw("p");
 
     hMomentum_d_lab[1][1]->SetLineWidth(1);
-    hMomentum_d_lab[1][1]->SetLineColor(kOrange+7);
+    hMomentum_d_lab[1][1]->SetLineColor(kOrange+1);
     hMomentum_d_lab[1][1]->SetFillStyle(3354);
-    hMomentum_d_lab[1][1]->SetFillColor(kOrange+7);
+    hMomentum_d_lab[1][1]->SetFillColor(kOrange+1);
     hMomentum_d_lab[1][1]->Draw("same LF2");
 
     TLine* line11[3];
@@ -563,7 +563,7 @@ void drawKinemHistoThesis() {
     Double_t maxY12 = hMomentum_d_lab[2][0]->GetMaximum()*1.1;
 
     //hMomentum_d_lab[2][0]->SetTitle("Deuteron momentum distribuntion");
-    hMomentum_d_lab[2][0]->GetXaxis()->SetTitle("p_{d}, GeV/c");
+    hMomentum_d_lab[2][0]->GetXaxis()->SetTitle("p_{d} [GeV/c]");
     hMomentum_d_lab[2][0]->GetXaxis()->SetTitleOffset(1.);
     hMomentum_d_lab[2][0]->GetXaxis()->SetTitleSize(0.06);
     hMomentum_d_lab[2][0]->GetXaxis()->SetLabelSize(0.05);
@@ -583,9 +583,9 @@ void drawKinemHistoThesis() {
     hMomentum_d_lab[2][0]->Draw("p");
 
     hMomentum_d_lab[2][1]->SetLineWidth(1);
-    hMomentum_d_lab[2][1]->SetLineColor(kOrange+7);
+    hMomentum_d_lab[2][1]->SetLineColor(kOrange+1);
     hMomentum_d_lab[2][1]->SetFillStyle(3354);
-    hMomentum_d_lab[2][1]->SetFillColor(kOrange+7);
+    hMomentum_d_lab[2][1]->SetFillColor(kOrange+1);
     hMomentum_d_lab[2][1]->Draw("same LF2");
 
     TLine* line12[3];
@@ -645,4 +645,3 @@ void drawKinemHistoThesis() {
     MyCanvas12a->Print("output/plots/hMomentum_d_lab_pl_2.eps","eps");
 
 }
-

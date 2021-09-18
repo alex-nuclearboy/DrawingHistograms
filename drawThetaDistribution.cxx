@@ -115,7 +115,7 @@ void drawThetaDistribution() {
     TCanvas* MyCanvas01 = new TCanvas();
 
     hist_Theta[0]->SetTitle("");
-    hist_Theta[0]->GetXaxis()->SetTitle("#theta,#circ");
+    hist_Theta[0]->GetXaxis()->SetTitle("#theta [#circ]");
     hist_Theta[0]->GetXaxis()->SetTitleOffset(1.);
     hist_Theta[0]->GetXaxis()->SetTitleSize(0.06);
     hist_Theta[0]->GetXaxis()->SetLabelSize(0.05);
@@ -159,7 +159,7 @@ void drawThetaDistribution() {
     TCanvas* MyCanvas02 = new TCanvas;
 
     hist_Theta[1]->SetTitle("");
-    hist_Theta[1]->GetXaxis()->SetTitle("#theta,#circ");
+    hist_Theta[1]->GetXaxis()->SetTitle("#theta [#circ]");
     hist_Theta[1]->GetXaxis()->SetTitleOffset(1.);
     hist_Theta[1]->GetXaxis()->SetTitleSize(0.06);
     hist_Theta[1]->GetXaxis()->SetLabelSize(0.05);
@@ -219,7 +219,7 @@ void drawThetaDistribution() {
     TCanvas* MyCanvas03 = new TCanvas;
 
     hist_Theta[2]->SetTitle("");
-    hist_Theta[2]->GetXaxis()->SetTitle("#theta,#circ");
+    hist_Theta[2]->GetXaxis()->SetTitle("#theta [#circ]");
     hist_Theta[2]->GetXaxis()->SetTitleOffset(1.);
     hist_Theta[2]->GetXaxis()->SetTitleSize(0.06);
     hist_Theta[2]->GetXaxis()->SetLabelSize(0.05);
@@ -260,4 +260,3 @@ void drawThetaDistribution() {
     MyCanvas03a->Print("output/plots/hTheta_gamma_pl.png","png");
 
 }
-

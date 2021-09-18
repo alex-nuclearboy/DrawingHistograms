@@ -122,8 +122,8 @@ void draw2DhistoThesis() {
     //
     TCanvas* MyCanvas00=new TCanvas("MyCanvas00","",600,550);
 
-    hEdepPSBvsSEC[0]->GetXaxis()->SetTitle("#DeltaE(SEC), GeV");
-    hEdepPSBvsSEC[0]->GetYaxis()->SetTitle("#DeltaE(PSB), GeV");
+    hEdepPSBvsSEC[0]->GetXaxis()->SetTitle("#DeltaE(SEC) [GeV]");
+    hEdepPSBvsSEC[0]->GetYaxis()->SetTitle("#DeltaE(PSB) [GeV]");
     hEdepPSBvsSEC[0]->GetXaxis()->SetTitleSize(0.06);
     hEdepPSBvsSEC[0]->GetXaxis()->SetTitleOffset(1.0);
     hEdepPSBvsSEC[0]->GetXaxis()->SetLabelSize(0.05);
@@ -182,8 +182,8 @@ void draw2DhistoThesis() {
     //
     TCanvas* MyCanvas01=new TCanvas("MyCanvas01","",600,550);
 
-    hEdepPSBvsSEC[1]->GetXaxis()->SetTitle("#DeltaE(SEC), GeV");
-    hEdepPSBvsSEC[1]->GetYaxis()->SetTitle("#DeltaE(PSB), GeV");
+    hEdepPSBvsSEC[1]->GetXaxis()->SetTitle("#DeltaE(SEC) [GeV]");
+    hEdepPSBvsSEC[1]->GetYaxis()->SetTitle("#DeltaE(PSB) [GeV]");
     hEdepPSBvsSEC[1]->GetXaxis()->SetTitleSize(0.06);
     hEdepPSBvsSEC[1]->GetXaxis()->SetTitleOffset(1.0);
     hEdepPSBvsSEC[1]->GetXaxis()->SetLabelSize(0.05);
@@ -232,8 +232,8 @@ void draw2DhistoThesis() {
     //
     TCanvas* myCanvas02=new TCanvas("MyCanvas02","",600,550);
 
-    hEdepPSBvsSEC[2]->GetXaxis()->SetTitle("#DeltaE(SEC), GeV");
-    hEdepPSBvsSEC[2]->GetYaxis()->SetTitle("#DeltaE(PSB), GeV");
+    hEdepPSBvsSEC[2]->GetXaxis()->SetTitle("#DeltaE(SEC) [GeV]");
+    hEdepPSBvsSEC[2]->GetYaxis()->SetTitle("#DeltaE(PSB) [GeV]");
     hEdepPSBvsSEC[2]->GetXaxis()->SetTitleSize(0.06);
     hEdepPSBvsSEC[2]->GetXaxis()->SetTitleOffset(1.0);
     hEdepPSBvsSEC[2]->GetXaxis()->SetLabelSize(0.05);
@@ -266,8 +266,8 @@ void draw2DhistoThesis() {
     //
     TCanvas* myCanvas03=new TCanvas("MyCanvas03","",600,550);
 
-    hEdepPSBvsSEC[3]->GetXaxis()->SetTitle("#DeltaE(SEC), GeV");
-    hEdepPSBvsSEC[3]->GetYaxis()->SetTitle("#DeltaE(PSB), GeV");
+    hEdepPSBvsSEC[3]->GetXaxis()->SetTitle("#DeltaE(SEC) [GeV]");
+    hEdepPSBvsSEC[3]->GetYaxis()->SetTitle("#DeltaE(PSB) [GeV]");
     hEdepPSBvsSEC[3]->GetXaxis()->SetTitleSize(0.06);
     hEdepPSBvsSEC[3]->GetXaxis()->SetTitleOffset(1.0);
     hEdepPSBvsSEC[3]->GetXaxis()->SetLabelSize(0.05);

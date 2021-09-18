@@ -48,7 +48,7 @@
 
 void draw1DhistoThesis() {
 
-    TFile* myFile[4];    
+    TFile* myFile[4];
     myFile[0] = new TFile("input/DATA-newcuts-AddGammaCut-offset-bound-pdpi0.root","READ");
     myFile[1] = new TFile("input/MC-newcuts-AddGammaCut-pd-bound-pdpi0.root","READ");
     myFile[2] = new TFile("input/MC-newcuts-AddGammaCut-pd-pdpi0.root","READ");
@@ -58,7 +58,7 @@ void draw1DhistoThesis() {
 
     TH1F* hIM_pion[3][2];
     TH1F* hMM_nucleon[3][2];
-    TH1F* hOpeningAngle_pi0_p_cm[3][2];    
+    TH1F* hOpeningAngle_pi0_p_cm[3][2];
     TH1F* hMomentum_d_lab[3][2];
     TH1F* hEnergy_Additional_gammas[3][2];
 
@@ -135,7 +135,7 @@ void draw1DhistoThesis() {
         Double_t maxY00 = hIM_pion[k][0]->GetMaximum()*1.1;
 
         //hIM_pion[k][0]->SetTitle("Invariant mass (pion)");
-        hIM_pion[k][0]->GetXaxis()->SetTitle("m_{#gamma#gamma}, GeV/c^{2}");
+        hIM_pion[k][0]->GetXaxis()->SetTitle("m_{#gamma#gamma} [GeV/c^{2}]");
         hIM_pion[k][0]->GetXaxis()->SetTitleOffset(1.);
         hIM_pion[k][0]->GetXaxis()->SetTitleSize(0.06);
         hIM_pion[k][0]->GetXaxis()->SetLabelSize(0.05);
@@ -154,13 +154,13 @@ void draw1DhistoThesis() {
         hIM_pion[k][0]->Draw("p");
 
         hIM_pion[k][1]->SetLineWidth(1);
-        hIM_pion[k][1]->SetLineColor(kOrange+7);
+        hIM_pion[k][1]->SetLineColor(kOrange+1);
         hIM_pion[k][1]->SetFillStyle(3354);
-        hIM_pion[k][1]->SetFillColor(kOrange+7);
+        hIM_pion[k][1]->SetFillColor(kOrange+1);
         hIM_pion[k][1]->Draw("same LF2");
 
         line00[0] = new TLine(0.135,0.,0.135,maxY00);
-        line00[0]->SetLineColor(kCyan+2);
+        line00[0]->SetLineColor(kCyan-3);
         line00[0]->SetLineWidth(1);
         line00[0]->SetLineStyle(1);
         line00[0]->Draw("same");
@@ -214,7 +214,7 @@ void draw1DhistoThesis() {
         hIM_pion[k][1]->Draw("same LF2");
 
         line00a[0] = new TLine(0.135,0.,0.135,maxY00a);
-        line00a[0]->SetLineColor(kCyan+2);
+        line00a[0]->SetLineColor(kCyan-3);
         line00a[0]->SetLineWidth(1);
         line00a[0]->SetLineStyle(1);
         line00a[0]->Draw("same");
@@ -253,7 +253,12 @@ void draw1DhistoThesis() {
             bs00->Draw();
         }
 
-        pow00->Draw();
+        TPaveText *pow00a = new TPaveText(0.017,maxY00a*1.035,0.017,maxY00a*1.035,"pow00a");
+        pow00a->SetTextSize(0.05);
+        pow00a->SetTextColor(1);
+        pow00a->SetTextAlign(22);
+        pow00a->AddText("#times10^{3}");
+        pow00a->Draw();
 
         MyCanvas00a->Print(Form("output/plots/hIM_pion_pl_%d.png",k),"png");
         MyCanvas00a->Print(Form("output/plots/hIM_pion_pl_%d.eps",k),"eps");
@@ -281,7 +286,7 @@ void draw1DhistoThesis() {
         Double_t maxY01 = hMM_nucleon[k][0]->GetMaximum()*1.1;
 
         //hMM_nucleon[k][0]->SetTitle("Missing mass (nucleon)");
-        hMM_nucleon[k][0]->GetXaxis()->SetTitle("m_{X}, GeV/c^{2}");
+        hMM_nucleon[k][0]->GetXaxis()->SetTitle("m_{X} [GeV/c^{2}]");
         hMM_nucleon[k][0]->GetXaxis()->SetTitleOffset(1.);
         hMM_nucleon[k][0]->GetXaxis()->SetTitleSize(0.06);
         hMM_nucleon[k][0]->GetXaxis()->SetLabelSize(0.05);
@@ -301,13 +306,13 @@ void draw1DhistoThesis() {
         hMM_nucleon[k][0]->Draw("p");
 
         hMM_nucleon[k][1]->SetLineWidth(1);
-        hMM_nucleon[k][1]->SetLineColor(kOrange+7);
+        hMM_nucleon[k][1]->SetLineColor(kOrange+1);
         hMM_nucleon[k][1]->SetFillStyle(3354);
-        hMM_nucleon[k][1]->SetFillColor(kOrange+7);
+        hMM_nucleon[k][1]->SetFillColor(kOrange+1);
         hMM_nucleon[k][1]->Draw("same LF2");
 
         line01[0] = new TLine(1.875,0.,1.875,maxY01);
-        line01[0]->SetLineColor(kCyan+2);
+        line01[0]->SetLineColor(kCyan-3);
         line01[0]->SetLineWidth(1);
         line01[0]->SetLineStyle(1);
         line01[0]->Draw("same");
@@ -361,7 +366,7 @@ void draw1DhistoThesis() {
         hMM_nucleon[k][1]->Draw("same LF2");
 
         line01a[0] = new TLine(1.875,0.,1.875,maxY01a);
-        line01a[0]->SetLineColor(kCyan+2);
+        line01a[0]->SetLineColor(kCyan-3);
         line01a[0]->SetLineWidth(1);
         line01a[0]->SetLineStyle(1);
         line01a[0]->Draw("same");
@@ -400,7 +405,12 @@ void draw1DhistoThesis() {
             bs01a->Draw();
         }
 
-        pow01->Draw();
+        TPaveText *pow01a = new TPaveText(0.105,maxY01a*1.035,0.105,maxY01a*1.035,"pow01a");
+        pow01a->SetTextSize(0.05);
+        pow01a->SetTextColor(1);
+        pow01a->SetTextAlign(22);
+        pow01a->AddText("#times10^{3}");
+        pow01a->Draw();
 
         MyCanvas01a->Print(Form("output/plots/hMM_nucleon_pl_%d.png",k),"png");
         MyCanvas01a->Print(Form("output/plots/hMM_nucleon_pl_%d.eps",k),"eps");
@@ -428,7 +438,7 @@ void draw1DhistoThesis() {
         Double_t maxY02 = hOpeningAngle_pi0_p_cm[k][0]->GetMaximum()*1.1;
 
         //hOpeningAngle_pi0_p_cm[k][0]->SetTitle("Opening Angle");
-        hOpeningAngle_pi0_p_cm[k][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM},#circ");
+        hOpeningAngle_pi0_p_cm[k][0]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM} [#circ]");
         hOpeningAngle_pi0_p_cm[k][0]->GetXaxis()->SetTitleOffset(1.);
         hOpeningAngle_pi0_p_cm[k][0]->GetXaxis()->SetTitleSize(0.06);
         hOpeningAngle_pi0_p_cm[k][0]->GetXaxis()->SetLabelSize(0.05);
@@ -447,9 +457,9 @@ void draw1DhistoThesis() {
         hOpeningAngle_pi0_p_cm[k][0]->Draw("E1");
 
         hOpeningAngle_pi0_p_cm[k][1]->SetLineWidth(1);
-        hOpeningAngle_pi0_p_cm[k][1]->SetLineColor(kOrange+7);
+        hOpeningAngle_pi0_p_cm[k][1]->SetLineColor(kOrange+1);
         hOpeningAngle_pi0_p_cm[k][1]->SetFillStyle(3354);
-        hOpeningAngle_pi0_p_cm[k][1]->SetFillColor(kOrange+7);
+        hOpeningAngle_pi0_p_cm[k][1]->SetFillColor(kOrange+1);
         hOpeningAngle_pi0_p_cm[k][1]->Draw("same LF2");
 
         line02[1] = new TLine(155.,0.,155.,maxY02);
@@ -543,7 +553,7 @@ void draw1DhistoThesis() {
         Double_t maxY03 = hMomentum_d_lab[k][0]->GetMaximum()*1.1;
 
         //hMomentum_d_lab[k][0]->SetTitle("Deuteron momentum in LAB");
-        hMomentum_d_lab[k][0]->GetXaxis()->SetTitle("p_{d}, GeV/c");
+        hMomentum_d_lab[k][0]->GetXaxis()->SetTitle("p_{d} [GeV/c]");
         hMomentum_d_lab[k][0]->GetXaxis()->SetTitleOffset(1.);
         hMomentum_d_lab[k][0]->GetXaxis()->SetTitleSize(0.06);
         hMomentum_d_lab[k][0]->GetXaxis()->SetLabelSize(0.05);
@@ -562,9 +572,9 @@ void draw1DhistoThesis() {
         hMomentum_d_lab[k][0]->Draw("E1");
 
         hMomentum_d_lab[k][1]->SetLineWidth(1);
-        hMomentum_d_lab[k][1]->SetLineColor(kOrange+7);
+        hMomentum_d_lab[k][1]->SetLineColor(kOrange+1);
         hMomentum_d_lab[k][1]->SetFillStyle(3354);
-        hMomentum_d_lab[k][1]->SetFillColor(kOrange+7);
+        hMomentum_d_lab[k][1]->SetFillColor(kOrange+1);
         hMomentum_d_lab[k][1]->Draw("same LF2");
 
         line03[1] = new TLine(0.6,0.,0.6,maxY03);
@@ -670,7 +680,7 @@ void draw1DhistoThesis() {
         Double_t maxY04 = hEnergy_Additional_gammas[k][0]->GetMaximum()*1.1;
 
         //hEnergy_Additional_gammas[k][0]->SetTitle("Additional gamma quanta");
-        hEnergy_Additional_gammas[k][0]->GetXaxis()->SetTitle("p_{#gamma}^{add}, GeV/c");
+        hEnergy_Additional_gammas[k][0]->GetXaxis()->SetTitle("p_{#gamma_{dod}} [GeV/c]");
         hEnergy_Additional_gammas[k][0]->GetXaxis()->SetTitleOffset(1.);
         hEnergy_Additional_gammas[k][0]->GetXaxis()->SetTitleSize(0.06);
         hEnergy_Additional_gammas[k][0]->GetXaxis()->SetLabelSize(0.05);
@@ -689,9 +699,9 @@ void draw1DhistoThesis() {
         hEnergy_Additional_gammas[k][0]->Draw("E1");
 
         hEnergy_Additional_gammas[k][1]->SetLineWidth(1);
-        hEnergy_Additional_gammas[k][1]->SetLineColor(kOrange+7);
+        hEnergy_Additional_gammas[k][1]->SetLineColor(kOrange+1);
         hEnergy_Additional_gammas[k][1]->SetFillStyle(3354);
-        hEnergy_Additional_gammas[k][1]->SetFillColor(kOrange+7);
+        hEnergy_Additional_gammas[k][1]->SetFillColor(kOrange+1);
         hEnergy_Additional_gammas[k][1]->Draw("same LF2");
 
         line04[1] = new TLine(0.03,0.,0.03,maxY04);
@@ -770,7 +780,7 @@ void draw1DhistoThesis() {
     Double_t maxY05 = hOpeningAngle_pi0_p_cm_MC[3]->GetMaximum()*1.1;
 
     //hOpeningAngle_pi0_p_cm_MC[3]->SetTitle("Opening Angle");
-    hOpeningAngle_pi0_p_cm_MC[3]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM},#circ");
+    hOpeningAngle_pi0_p_cm_MC[3]->GetXaxis()->SetTitle("#vartheta_{#pi^{0}-p}^{CM} [#circ]");
     hOpeningAngle_pi0_p_cm_MC[3]->GetXaxis()->SetTitleOffset(1.);
     hOpeningAngle_pi0_p_cm_MC[3]->GetXaxis()->SetTitleSize(0.06);
     hOpeningAngle_pi0_p_cm_MC[3]->GetXaxis()->SetLabelSize(0.05);
@@ -827,4 +837,3 @@ void draw1DhistoThesis() {
     MyCanvas05a->Print("output/plots/hOpeningAngle_pi0_p_cm_MC_pl.eps","eps");
 
 }
-
