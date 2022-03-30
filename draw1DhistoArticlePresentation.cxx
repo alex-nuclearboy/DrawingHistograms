@@ -61,7 +61,7 @@ void draw1DhistoArticlePresentation() {
     TH1F* hMissingMass_nucleon[3];
     TH1F* hMomentum_deuteron[3];
 
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i){
 
         myFile[i]->cd("Histograms");
         hInvariantMass_pion[i] = (TH1F*)gDirectory->Get("DATA_lev2_cut0/hIM_pion_lev2_cut0");
